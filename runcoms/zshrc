@@ -151,6 +151,15 @@ function myAliasSettings {
 myAliasSettings
 
 #------------------- functions -------------------
+function getPageTitle() {
+  wget -qO- $1 | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si'
+}
+
+function getPageTitleWithMarkDownStyle() {
+  title=`getPageTitle $1`
+  echo "[${title}](${1})"
+}
+
 function findText() {
   find ./ -type f -print | xargs grep $1
 }
