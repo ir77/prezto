@@ -155,6 +155,15 @@ function myAliasSettings {
 myAliasSettings
 
 #------------------- functions -------------------
+
+function processFileWithCommand() { # args: filename command
+  cat $1 | while read line
+  do
+    $2 $line
+  done
+}
+
+
 function getPageTitle() {
   wget -qO- $1 | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si'
 }
