@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 #-------------------- 全体 --------------------
-function myOtherSettings {
+function myEnvironmentSettings {
   setopt notify # バックグラウンドジョブの状態変化を即時報告する
 
   setopt no_beep # ビープ音を鳴らさないようにする
@@ -39,8 +39,12 @@ function myOtherSettings {
   ## 言語環境を日本語、UTF-8 にそろえておく
   export LANG=ja_JP.UTF-8
   export LESSCHARSET=utf-8
+
+  export GOPATH=${HOME}/go
+
+  export XDG_CONFIG_HOME=~/.config
 }
-myOtherSettings
+myEnvironmentSettings
 
 # --------------------ヒストリー--------------------
 function myHistorySettings {
