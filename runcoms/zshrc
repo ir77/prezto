@@ -154,6 +154,11 @@ function myAliasSettings {
     done
   fi
   source ~/.zsh/app
+
+  # Haskell
+  alias ghci='stack ghci'
+  alias ghc='stack ghc --'
+  alias runghc='stack runghc --'
 }
 myAliasSettings
 
@@ -181,7 +186,7 @@ function findText() {
 }
 
 function makeGifFromMov() {
-  ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+  ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=5 --delay=5 > out.gif
 }
 
 # vimにctrl-zで戻る
