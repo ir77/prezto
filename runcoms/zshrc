@@ -159,6 +159,9 @@ function myAliasSettings {
   alias ghci='stack ghci'
   alias ghc='stack ghc --'
   alias runghc='stack runghc --'
+
+  # thefuck
+  eval $(thefuck --alias)
 }
 myAliasSettings
 
