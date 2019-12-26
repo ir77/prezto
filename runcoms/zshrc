@@ -145,16 +145,6 @@ function myAliasSettings {
   alias -s ml=runocaml
   alias -s hs=runHaskell
 
-  # .appの起動
-  if [[ ! -e ~/.zsh/app ]]; then
-    for i in /Applications/*.app; do
-    file=$(basename "$i" .app)
-    name=$(echo $file | tr '[ A-Z]' '[_a-z]')
-    echo alias $name="\"open -a '$file'\"" >> ~/.zsh/app
-    done
-  fi
-  source ~/.zsh/app
-
   # Haskell
   alias ghci='stack ghci'
   alias ghc='stack ghc --'
