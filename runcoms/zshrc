@@ -43,6 +43,8 @@ function myEnvironmentSettings {
   export GOPATH=${HOME}/go
 
   export XDG_CONFIG_HOME=~/.config
+
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
 }
 myEnvironmentSettings
 
